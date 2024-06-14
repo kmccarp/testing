@@ -1,0 +1,11 @@
+type: specs.openrewrite.org/v1beta/recipe
+name: org.kmccarp.ReproduceYamlBug
+displayName: Reproduce YAML recipe bug
+description: ""
+preconditions:
+  - org.openrewrite.FindSourceFiles:
+      filePattern: "**/application.yml"
+recipeList:
+  - org.openrewrite.text.ChangeText:
+      toText: foo=bar
+
